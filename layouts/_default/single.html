@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-<section class="content-page container">
+<section class="content-page container {{ if eq .Title "Resume & Projects" }}resume-page{{ end }}">
   <p class="eyebrow">NATALIA REINOSO</p>
   <h1>{{ .Title }}</h1>
 
