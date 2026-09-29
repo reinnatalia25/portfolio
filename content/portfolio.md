@@ -1,8 +1,7 @@
 ---
-
 title: "Academic Portfolio"
 description: "Academic research and data analysis projects"
------------------------------------------------------------
+---
 
 # Research & Data Analysis
 
