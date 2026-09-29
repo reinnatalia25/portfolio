@@ -1,4 +1,4 @@
-name: Deploy Hugo site to Pages
+name: Deploy Hugo site to GitHub Pages
 
 on:
 push:
@@ -12,7 +12,7 @@ pages: write
 id-token: write
 
 concurrency:
-group: "pages"
+group: pages
 cancel-in-progress: true
 
 jobs:
@@ -31,10 +31,13 @@ submodules: recursive
       hugo-version: "latest"
       extended: true
 
-  - name: Build
-    run: hugo --minify --environment production
+  - name: Configure GitHub Pages
+    uses: actions/configure-pages@v5
 
-  - name: Upload artifact
+  - name: Build website
+    run: hugo --minify
+
+  - name: Upload website
     uses: actions/upload-pages-artifact@v3
     with:
       path: ./public
@@ -46,7 +49,10 @@ name: github-pages
 url: ${{ steps.deployment.outputs.page_url }}
 runs-on: ubuntu-latest
 needs: build
+
+```
 steps:
-- name: Deploy
-id: deployment
-uses: actions/deploy-pages@v4
+  - name: Deploy to GitHub Pages
+    id: deployment
+    uses: actions/deploy-pages@v4
+```
