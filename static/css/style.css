@@ -440,97 +440,132 @@ padding: 25px 20px;
 
 .resume-page {
     max-width: 850px;
-    margin: 60px auto;
-    padding: 45px 55px;
-    background: var(--card-bg, #ffffff);
-    border: 1px solid rgba(100, 120, 130, 0.2);
-    border-radius: 8px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    width: 90%;
+    margin: 45px auto 80px;
+    padding: 0;
+    min-height: auto;
 }
 
 .resume-page > .eyebrow {
     text-align: center;
+    margin-bottom: 8px;
     letter-spacing: 3px;
-    font-size: 0.75rem;
 }
 
 .resume-page > h1 {
+    color: var(--green);
     text-align: center;
-    font-size: 2.5rem;
-    margin: 8px 0 30px;
+    font-size: 2.8rem;
+    line-height: 1.2;
+    margin-bottom: 28px;
 }
 
-.resume-page .markdown-content h1,
-.resume-page .markdown-content h2 {
-    color: var(--accent, #527c83);
-    font-size: 1.15rem;
-    letter-spacing: 1.5px;
+/* The resume document itself */
+.resume-page .markdown-content {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-top: 5px solid var(--green);
+    border-radius: 4px;
+    padding: 48px 58px;
+    box-shadow: 0 8px 28px rgba(38, 51, 46, 0.10);
+}
+
+/* Main resume sections */
+.resume-page .markdown-content h1 {
+    color: var(--green);
+    font-size: 1.05rem;
+    letter-spacing: 1.8px;
     text-transform: uppercase;
-    border-bottom: 1px solid rgba(82, 124, 131, 0.4);
-    padding-bottom: 8px;
-    margin-top: 32px;
-    margin-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 7px;
+    margin: 30px 0 15px;
 }
 
+.resume-page .markdown-content h1:first-child {
+    margin-top: 0;
+}
+
+/* Job titles and project titles */
 .resume-page .markdown-content h2 {
+    color: var(--dark);
     font-size: 1rem;
-    text-transform: none;
-    letter-spacing: 0;
-    border-bottom: none;
-    padding-bottom: 0;
-    margin-top: 20px;
-    margin-bottom: 6px;
+    font-weight: 700;
+    margin: 20px 0 3px;
+    line-height: 1.4;
 }
 
+/* Paragraphs and dates */
 .resume-page .markdown-content p {
-    line-height: 1.6;
-    margin: 5px 0 10px;
+    color: var(--gray);
+    font-size: 0.91rem;
+    line-height: 1.55;
+    margin: 4px 0 10px;
 }
 
+/* Lists and experience bullets */
 .resume-page .markdown-content ul {
+    margin: 6px 0 18px;
     padding-left: 22px;
-    margin: 8px 0 18px;
+    color: var(--gray);
 }
 
 .resume-page .markdown-content li {
-    padding-left: 3px;
-    margin-bottom: 5px;
+    font-size: 0.9rem;
     line-height: 1.5;
+    padding-left: 2px;
+    margin-bottom: 4px;
 }
 
+/* Bold text */
 .resume-page .markdown-content strong {
+    color: var(--dark);
     font-weight: 700;
 }
 
+/* Dates and italicized details */
 .resume-page .markdown-content em {
-    color: var(--muted, #64748b);
-    font-size: 0.9rem;
+    color: var(--green-light);
+    font-size: 0.86rem;
+    font-style: italic;
 }
 
+/* Project links */
 .resume-page .markdown-content a {
-    color: var(--accent, #527c83);
-    font-weight: 600;
+    color: var(--green);
+    font-weight: 700;
     text-decoration: underline;
     text-underline-offset: 3px;
 }
 
+/* Remove unnecessary horizontal rules */
+.resume-page .markdown-content hr {
+    border: 0;
+    border-top: 1px solid var(--border);
+    margin: 20px 0;
+}
+
+/* Mobile */
 @media (max-width: 700px) {
     .resume-page {
         width: 94%;
-        margin: 30px auto;
+        margin: 30px auto 50px;
+    }
+
+    .resume-page .markdown-content {
         padding: 28px 22px;
     }
 
     .resume-page > h1 {
-        font-size: 2rem;
-    }
-
-    .resume-page .markdown-content h1 {
-        font-size: 1.05rem;
+        font-size: 2.1rem;
     }
 }
 
+/* Print */
 @media print {
+    body {
+        background: white;
+    }
+
     .site-header,
     .site-footer {
         display: none;
@@ -540,6 +575,9 @@ padding: 25px 20px;
         width: 100%;
         max-width: none;
         margin: 0;
+    }
+
+    .resume-page .markdown-content {
         padding: 0;
         border: none;
         box-shadow: none;
