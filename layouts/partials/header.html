@@ -1,11 +1,11 @@
 <header class="site-header">
   <div class="nav-container">
-    <a class="logo" href="{{ "/" | relURL }}">NR.</a>
+    <a class="logo" href="{{ .Site.Home.RelPermalink }}">NR.</a>
 
     <nav>
-      <a href="{{ "/" | relURL }}">Home</a>
-      <a href="{{ "/resume/" | relURL }}">Resume & Projects</a>
-      <a href="{{ "/portfolio/" | relURL }}">Academic Portfolio</a>
+      <a href="{{ .Site.Home.RelPermalink }}">Home</a>
+      <a href="{{ "resume/" | relURL }}">Resume & Projects</a>
+      <a href="{{ "portfolio/" | relURL }}">Academic Portfolio</a>
     </nav>
   </div>
 </header>
