@@ -1,9 +1,7 @@
 ---
-
 title: "Resume & Projects"
 description: "Education, experience, and selected projects"
------------------------------------------------------------
-
+---
 # Education
 
 **College of William & Mary**
