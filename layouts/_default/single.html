@@ -1,0 +1,18 @@
+{{ define "main" }}
+
+<section class="content-page container">
+  <p class="eyebrow">NATALIA REINOSO</p>
+  <h1>{{ .Title }}</h1>
+
+{{ if eq .Title "Resume & Projects" }}
+<a class="button resume-button"
+href="{{ "files/Natalia-Reinoso-Resume.pdf" | relURL }}"
+target="_blank">
+View / Download Resume (PDF) </a>
+{{ end }}
+
+  <article class="markdown-content">
+    {{ .Content }}
+  </article>
+</section>
+{{ end }}
