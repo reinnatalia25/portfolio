@@ -1,7 +1,6 @@
 baseURL = "https://reinnatalia25.github.io/portfolio/"
 languageCode = "en-us"
 title = "Natalia Reinoso | Economics & Data Analytics"
-theme = ""
 relativeURLs = false
 canonifyURLs = false
 
