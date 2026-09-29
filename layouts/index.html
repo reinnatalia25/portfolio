@@ -1,0 +1,101 @@
+{{ define "main" }}
+
+<section class="hero container">
+  <div class="hero-text">
+    <p class="eyebrow">ECONOMICS GRADUATE | DATA SCIENCE</p>
+    <h1>Natalia<br>Reinoso</h1>
+
+```
+<h2>Economics, Research & Data Analysis</h2>
+
+<p class="intro">
+  Recent graduate of William & Mary with a bachelor's
+  degree in Economics and a minor in Data Science.
+  Interested in using research, data, and analytical
+  skills to solve practical problems and support
+  organizational decision-making.
+</p>
+
+<div class="hero-buttons">
+  <a class="button" href="{{ "/resume/" | relURL }}">
+    View My Resume
+  </a>
+  <a class="text-link" href="{{ "/portfolio/" | relURL }}">
+    Explore My Work →
+  </a>
+</div>
+```
+
+  </div>
+
+  <div class="hero-image">
+    <img src="{{ "images/profile.jpg" | relURL }}"
+         alt="Portrait of Natalia Reinoso">
+  </div>
+</section>
+
+<section class="skills-section">
+  <div class="container">
+    <p class="eyebrow">WHAT I BRING</p>
+    <h2>Skills & Expertise</h2>
+    <p class="section-intro">
+      A combination of analytical, technical, and
+      communication skills developed through academic
+      research and professional experience.
+    </p>
+
+```
+<div class="skills-grid">
+  <div class="skill-card">
+    <h3>Data Analysis</h3>
+    <p>Analyzing economic, demographic, and healthcare
+    datasets to identify trends and patterns.</p>
+  </div>
+
+  <div class="skill-card">
+    <h3>Research</h3>
+    <p>Conducting research, interpreting findings,
+    and communicating evidence-based conclusions.</p>
+  </div>
+
+  <div class="skill-card">
+    <h3>Technical Skills</h3>
+    <p>Microsoft Excel, STATA, data visualization,
+    and basic Python.</p>
+  </div>
+
+  <div class="skill-card">
+    <h3>Communication</h3>
+    <p>Presenting research findings, assisting others,
+    and translating information into clear language.</p>
+  </div>
+</div>
+```
+
+  </div>
+</section>
+
+<section class="home-projects container">
+  <p class="eyebrow">SELECTED WORK</p>
+  <h2>Academic Projects</h2>
+  <p>Explore examples of my academic research and data analysis.</p>
+
+  <div class="project-preview">
+    <div>
+      <h3>Food Insecurity & Maternal Mortality</h3>
+      <p>Research examining the relationship between
+      food insecurity and maternal health outcomes in Mali.</p>
+    </div>
+    <a href="{{ "/portfolio/" | relURL }}">View project →</a>
+  </div>
+
+  <div class="project-preview">
+    <div>
+      <h3>Healthcare Outcomes Analysis</h3>
+      <p>Analysis of WIC participation and test performance.</p>
+    </div>
+    <a href="{{ "/portfolio/" | relURL }}">View project →</a>
+  </div>
+</section>
+
+{{ end }}
