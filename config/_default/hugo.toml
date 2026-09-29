@@ -1,32 +1,10 @@
-baseURL = 'https://yourusername.github.io/'
-languageCode = 'en-us'
-title = 'Quantitative & Policy Analyst Portfolio'
-theme = 'ananke' # Works with standard Hugo themes like Ananke, PaperMod, or Blowfish
+baseURL = "https://reinnataila25.github.io/portfolio/"
+languageCode = "en-us"
+title = "Natalia Reinoso | Economics & Data Analytics"
+theme = ""
+relativeURLs = false
+canonifyURLs = false
 
 [params]
-  author = "Analyst Portfolio"
-  description = "Economics & Data Science Graduate | Quantitative Research & Analytics"
-  
-[params.profile]
-  education = "B.A. in Economics, Minor in Data Science"
-  focus_areas = ["Health Economics", "Tax Policy", "Actuarial & Insurance Analytics", "Econometrics"]
-
-[[menu.main]]
-  name = "About"
-  url = "/about/"
-  weight = 1
-
-[[menu.main]]
-  name = "Projects"
-  url = "/projects/"
-  weight = 2
-
-[[menu.main]]
-  name = "Research"
-  url = "/research/"
-  weight = 3
-
-[[menu.main]]
-  name = "Resume"
-  url = "/resume/"
-  weight = 4
+author = "Natalia Reinoso"
+description = "Economics graduate from William & Mary with a minor in Data Science."
