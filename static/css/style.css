@@ -1,0 +1,434 @@
+/* ==========================
+GLOBAL STYLES
+========================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+:root {
+--green: #29483c;
+--green-light: #52766a;
+--cream: #f7f5f0;
+--white: #ffffff;
+--dark: #26332e;
+--gray: #68716d;
+--border: #e3e5df;
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+font-family: Arial, Helvetica, sans-serif;
+background: var(--cream);
+color: var(--dark);
+line-height: 1.7;
+}
+
+a {
+color: var(--green);
+text-decoration: none;
+}
+
+a:hover {
+color: var(--green-light);
+}
+
+.container {
+width: 90%;
+max-width: 1150px;
+margin: 0 auto;
+}
+
+/* ==========================
+NAVIGATION
+========================== */
+
+.site-header {
+background: var(--cream);
+border-bottom: 1px solid var(--border);
+position: sticky;
+top: 0;
+z-index: 10;
+}
+
+.nav-container {
+max-width: 1150px;
+width: 90%;
+min-height: 75px;
+margin: auto;
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 20px;
+}
+
+.logo {
+font-size: 1.6rem;
+font-weight: 800;
+color: var(--green);
+}
+
+nav {
+display: flex;
+gap: 30px;
+}
+
+nav a {
+color: var(--dark);
+font-size: 0.95rem;
+font-weight: 600;
+}
+
+nav a:hover {
+color: var(--green-light);
+}
+
+/* ==========================
+HOMEPAGE HERO
+========================== */
+
+.hero {
+min-height: 580px;
+display: grid;
+grid-template-columns: 1.2fr 0.8fr;
+align-items: center;
+gap: 70px;
+padding-top: 70px;
+padding-bottom: 90px;
+}
+
+.eyebrow {
+color: var(--green-light);
+font-size: 0.78rem;
+font-weight: 700;
+letter-spacing: 2px;
+margin-bottom: 14px;
+}
+
+.hero h1 {
+color: var(--green);
+font-size: clamp(3.5rem, 7vw, 6rem);
+line-height: 1.05;
+margin-bottom: 20px;
+letter-spacing: -3px;
+}
+
+.hero h2 {
+font-size: 1.2rem;
+margin-bottom: 18px;
+font-weight: 600;
+}
+
+.intro {
+color: var(--gray);
+max-width: 540px;
+font-size: 1rem;
+}
+
+.hero-image {
+width: 100%;
+max-width: 390px;
+justify-self: end;
+}
+
+.hero-image img {
+width: 100%;
+aspect-ratio: 4 / 5;
+object-fit: cover;
+border-radius: 12px;
+display: block;
+}
+
+.hero-buttons {
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+gap: 25px;
+margin-top: 30px;
+}
+
+.button {
+display: inline-block;
+background: var(--green);
+color: var(--white);
+padding: 12px 22px;
+border-radius: 5px;
+font-weight: 600;
+transition: background 0.2s ease;
+}
+
+.button:hover {
+color: var(--white);
+background: var(--green-light);
+}
+
+.text-link {
+font-weight: 600;
+}
+
+/* ==========================
+SKILLS
+========================== */
+
+.skills-section {
+background: #eeeee8;
+padding: 85px 0;
+}
+
+.skills-section h2,
+.home-projects h2 {
+color: var(--green);
+font-size: 2.2rem;
+margin-bottom: 12px;
+}
+
+.section-intro {
+color: var(--gray);
+max-width: 650px;
+margin-bottom: 35px;
+}
+
+.skills-grid {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 18px;
+}
+
+.skill-card {
+background: var(--white);
+padding: 25px 20px;
+border: 1px solid var(--border);
+border-radius: 8px;
+}
+
+.skill-card h3 {
+color: var(--green);
+font-size: 1.05rem;
+margin-bottom: 10px;
+}
+
+.skill-card p {
+color: var(--gray);
+font-size: 0.9rem;
+}
+
+/* ==========================
+HOMEPAGE PROJECTS
+========================== */
+
+.home-projects {
+padding-top: 90px;
+padding-bottom: 100px;
+}
+
+.project-preview {
+background: var(--white);
+border: 1px solid var(--border);
+border-radius: 8px;
+padding: 25px;
+margin-top: 18px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 20px;
+}
+
+.project-preview h3 {
+color: var(--green);
+margin-bottom: 5px;
+}
+
+.project-preview p {
+color: var(--gray);
+font-size: 0.95rem;
+}
+
+.project-preview a {
+font-weight: 600;
+white-space: nowrap;
+}
+
+/* ==========================
+CONTENT PAGES
+========================== */
+
+.content-page {
+max-width: 900px;
+padding-top: 75px;
+padding-bottom: 100px;
+min-height: 75vh;
+}
+
+.content-page > h1 {
+color: var(--green);
+font-size: clamp(2.5rem, 5vw, 4rem);
+line-height: 1.2;
+margin-bottom: 30px;
+}
+
+.resume-button {
+margin-bottom: 35px;
+}
+
+.markdown-content {
+background: var(--white);
+padding: 45px;
+border: 1px solid var(--border);
+border-radius: 10px;
+}
+
+.markdown-content h1 {
+color: var(--green);
+font-size: 2rem;
+margin-bottom: 20px;
+}
+
+.markdown-content h2 {
+color: var(--green);
+font-size: 1.5rem;
+margin-top: 35px;
+margin-bottom: 12px;
+}
+
+.markdown-content h3 {
+color: var(--dark);
+font-size: 1.1rem;
+margin-top: 20px;
+margin-bottom: 8px;
+}
+
+.markdown-content p {
+color: var(--gray);
+margin-bottom: 15px;
+}
+
+.markdown-content ul {
+margin: 10px 0 20px 25px;
+color: var(--gray);
+}
+
+.markdown-content li {
+margin-bottom: 6px;
+}
+
+.markdown-content hr {
+border: 0;
+border-top: 1px solid var(--border);
+margin: 35px 0;
+}
+
+.markdown-content a {
+font-weight: 600;
+}
+
+/* ==========================
+FOOTER
+========================== */
+
+.site-footer {
+background: var(--green);
+color: var(--white);
+text-align: center;
+padding: 30px 20px;
+}
+
+.site-footer p {
+font-size: 0.85rem;
+margin-bottom: 5px;
+}
+
+.site-footer a {
+color: var(--white);
+text-decoration: underline;
+font-size: 0.9rem;
+}
+
+/* ==========================
+MOBILE
+========================== */
+
+@media (max-width: 800px) {
+.hero {
+grid-template-columns: 1fr 0.8fr;
+gap: 25px;
+min-height: auto;
+padding-top: 60px;
+padding-bottom: 65px;
+}
+
+.hero h1 {
+font-size: clamp(3rem, 9vw, 4.5rem);
+}
+
+.skills-grid {
+grid-template-columns: repeat(2, 1fr);
+}
+
+nav {
+gap: 15px;
+}
+
+nav a {
+font-size: 0.85rem;
+}
+}
+
+@media (max-width: 550px) {
+.nav-container {
+flex-direction: column;
+padding: 15px 0;
+gap: 8px;
+}
+
+nav {
+justify-content: center;
+flex-wrap: wrap;
+gap: 12px 18px;
+}
+
+.hero {
+grid-template-columns: 1fr;
+text-align: center;
+gap: 30px;
+padding-top: 50px;
+}
+
+.hero h1 {
+font-size: 3.6rem;
+}
+
+.hero-image {
+justify-self: center;
+max-width: 280px;
+}
+
+.hero-buttons {
+justify-content: center;
+}
+
+.skills-section {
+padding: 60px 0;
+}
+
+.skills-grid {
+grid-template-columns: 1fr;
+}
+
+.project-preview {
+flex-direction: column;
+align-items: flex-start;
+}
+
+.content-page {
+padding-top: 45px;
+}
+
+.markdown-content {
+padding: 25px 20px;
+}
+}
