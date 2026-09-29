@@ -1,12 +1,17 @@
+
 {{ define "main" }}
 
 <section class="content-page container {{ if eq .Title "Resume & Projects" }}resume-page{{ end }}">
-  <p class="eyebrow">NATALIA REINOSO</p>
-  <h1>{{ .Title }}</h1>
+
+  {{ if ne .Title "Resume & Projects" }}
+    <p class="eyebrow">NATALIA REINOSO</p>
+    <h1>{{ .Title }}</h1>
+  {{ end }}
 
   <article class="markdown-content">
     {{ .Content }}
   </article>
+
 </section>
 
 {{ end }}
