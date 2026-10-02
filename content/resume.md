@@ -6,7 +6,7 @@ description: "Education, experience, and selected projects"
 
 # Natalia Reinoso
 
-Norfolk, VA | your.email@example.com | (757) 000-0000
+Norfolk, VA | rein.natalia25@gmail.com | (757) 515-1272
 
 ## EDUCATION
 
