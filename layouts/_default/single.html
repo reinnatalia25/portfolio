@@ -1,11 +1,36 @@
-
 {{ define "main" }}
 
-<section class="content-page container {{ if eq .Title "Resume & Projects" }}resume-page{{ end }}">
+<section class="content-page
+  {{ if eq .Title "Resume & Projects" }}resume-page{{ end }}
+  {{ if eq .Title "Academic Portfolio" }}portfolio-page{{ end }}">
 
-  {{ if ne .Title "Resume & Projects" }}
+  {{ if eq .Title "Resume & Projects" }}
+
+    <div class="page-heading resume-heading">
+      <div class="page-heading-accent"></div>
+      <p class="eyebrow">PROFESSIONAL PROFILE</p>
+      <h1>{{ .Title }}</h1>
+      <p class="page-subtitle">
+        Education, experience, skills, and selected analytical work.
+      </p>
+    </div>
+
+  {{ else if eq .Title "Academic Portfolio" }}
+
+    <div class="page-heading portfolio-heading">
+      <div class="page-heading-accent"></div>
+      <p class="eyebrow">SELECTED WORK</p>
+      <h1>{{ .Title }}</h1>
+      <p class="page-subtitle">
+        A collection of research, data analysis, and academic projects.
+      </p>
+    </div>
+
+  {{ else }}
+
     <p class="eyebrow">NATALIA REINOSO</p>
     <h1>{{ .Title }}</h1>
+
   {{ end }}
 
   <article class="markdown-content">
