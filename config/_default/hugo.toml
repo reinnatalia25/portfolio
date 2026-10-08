@@ -5,3 +5,8 @@ title = "Natalia Reinoso | Economics & Data Analytics"
 [params]
 author = "Natalia Reinoso"
 description = "Economics graduate from William & Mary with a minor in Data Science."
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
