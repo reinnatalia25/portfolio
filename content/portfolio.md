@@ -79,8 +79,6 @@ Written communication · Presentation
 
 <div class="media-placeholder">
 
-  <div class="media-icon">+</div>
-
   <h3>Healthcare Outcomes Analysis</h3>
 
   <p>Read the research paper or view the presentation.</p>
@@ -160,8 +158,6 @@ Quantitative interpretation
 
 <div class="media-placeholder">
 
-  <div class="media-icon">+</div>
-
   <h3>Colonial Williamsburg Research</h3>
 
   <p>Read the research paper on historical tourism and occupational segregation.</p>
@@ -238,8 +234,6 @@ Version control · Documentation · Iterative testing
 
 <div class="media-placeholder">
 
-  <div class="media-icon">+</div>
-
   <h3>AI-Assisted Portfolio Website</h3>
 
   <p>A live website developed with AI-assisted tools.</p>
@@ -314,8 +308,6 @@ User experience · Technical documentation
 </div>
 
 <div class="media-placeholder">
-
-  <div class="media-icon">+</div>
 
   <h3>AI Budget Assistant</h3>
 
