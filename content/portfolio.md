@@ -76,22 +76,28 @@ Written communication · Presentation
 <span>01</span>
 </div>
 
+
 <div class="media-placeholder">
 
-<div class="media-icon">+</div>
+  <div class="media-icon">+</div>
 
-<h3>Healthcare Outcomes Analysis</h3>
+  <h3>Healthcare Outcomes Analysis</h3>
 
-<p>
-Project paper, presentation, charts, or supporting materials can be
-displayed here.
-</p>
+  <p>Read the research paper or view the presentation.</p>
 
-<a class="media-button"
-href="{{ "project-files/healthcare-outcomes-analysis.pdf" | relURL }}"
-target="_blank">
-View Project PDF →
-</a>
+  <a class="media-button"
+     href="{{ "documents/WIC-Research-Paper.pdf" | relURL }}"
+     target="_blank"
+     rel="noopener">
+    View Research Paper →
+  </a>
+
+  <a class="media-button"
+     href="{{ "documents/WIC-Benefits.pptx" | relURL }}"
+     target="_blank"
+     rel="noopener">
+    View Presentation →
+  </a>
 
 </div>
 
