@@ -3745,62 +3745,137 @@ nav a:hover::after {
 
 
 /* =========================================
-   ACADEMIC PORTFOLIO — PROJECT MATERIALS
+   ACADEMIC PORTFOLIO — RESOURCE PANELS
    ========================================= */
 
-/* Remove the plus icons */
-.project-showcase .media-icon {
+/* Let the materials panel size itself to its content */
+.project-showcase {
+  align-items: start;
+}
+
+.project-showcase .project-media {
+  align-self: start;
+  min-height: 0;
+  height: auto;
+}
+
+/* Keep the header, but make it slightly more compact */
+.project-showcase .media-header {
+  flex: 0 0 auto;
+  padding: 13px 18px;
+}
+
+/* Remove the old oversized, vertically centered placeholder */
+.project-showcase .media-placeholder {
+  flex: initial;
+  min-height: 0;
+  height: auto;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 12px;
+  text-align: left;
+}
+
+/* No decorative plus signs */
+.project-showcase .media-placeholder .media-icon {
   display: none;
 }
 
-/* Make the materials area more compact */
-.project-showcase .project-media .media-placeholder {
-  min-height: 0;
-  height: auto;
-  padding: 1.25rem;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.65rem;
-}
-
-/* Reduce unnecessary spacing around titles and descriptions */
+/* Resource title and intro */
 .project-showcase .media-placeholder h3 {
-  margin: 0.25rem 0;
+  margin: 0;
   font-size: 1.05rem;
+  line-height: 1.4;
 }
 
 .project-showcase .media-placeholder p {
-  margin: 0 0 0.5rem;
+  max-width: none;
+  margin: 0 0 4px;
+  font-size: 0.8rem;
   line-height: 1.6;
 }
 
-/* Give each button breathing room */
+/* Resource links: neat, full-width rows */
 .project-showcase .media-placeholder .media-button {
-  display: inline-flex;
+  box-sizing: border-box;
+  display: flex;
   align-items: center;
-  width: fit-content;
-  max-width: 100%;
-  margin: 0.25rem 0;
-  padding: 0.7rem 1rem;
-  border-radius: 6px;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 14px 15px;
+
+  color: var(--purple-dark);
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid var(--purple-light);
+  border-radius: 9px;
+
+  font-size: 0.78rem;
+  line-height: 1.4;
+  text-align: left;
   text-decoration: none;
+  box-shadow: none;
+
   transition:
     background-color 0.2s ease,
-    color 0.2s ease,
+    border-color 0.2s ease,
     transform 0.2s ease,
     box-shadow 0.2s ease;
 }
 
-/* Subtle hover effect */
-.project-showcase .media-placeholder .media-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-  filter: brightness(0.92);
+/* Add an arrow without changing the HTML */
+.project-showcase .media-placeholder .media-button::after {
+  content: "↗";
+  flex: 0 0 auto;
+  font-size: 1rem;
+  transition: transform 0.2s ease;
 }
 
-/* Keyboard accessibility */
+/* Alternate projects keep their sage accent */
+.project-two .media-placeholder .media-button,
+.project-four .media-placeholder .media-button {
+  color: var(--sage);
+  border-color: var(--sage-light);
+}
+
+/* Hover */
+.project-showcase .media-placeholder .media-button:hover {
+  color: var(--purple-dark);
+  background: var(--white);
+  border-color: var(--purple);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(38, 51, 46, 0.08);
+  filter: none;
+}
+
+.project-showcase .media-placeholder .media-button:hover::after {
+  transform: translate(2px, -2px);
+}
+
+.project-two .media-placeholder .media-button:hover,
+.project-four .media-placeholder .media-button:hover {
+  color: var(--green);
+  border-color: var(--sage);
+}
+
+/* Keyboard focus */
 .project-showcase .media-placeholder .media-button:focus-visible {
-  outline: 2px solid #29483c;
+  outline: 2px solid var(--purple-dark);
   outline-offset: 3px;
+}
+
+/* Mobile spacing */
+@media (max-width: 900px) {
+  .project-showcase .project-media {
+    width: 100%;
+  }
+
+  .project-showcase .media-placeholder {
+    padding: 20px;
+  }
 }
