@@ -400,33 +400,24 @@ nav a:hover::after {
   border-radius: 9px;
 }
 
+
 .photo-label {
   position: absolute;
-
+  z-index: 2;
   left: 25px;
   bottom: 25px;
-
-  z-index: 2;
-
   display: flex;
   gap: 9px;
-
-  padding: 6px 10px;
-
-  background: rgba(247, 245, 240, 0.94);
-
-  border: 1px solid var(--purple-light);
-
-  border-radius: 4px;
-
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 0;
   color: var(--purple-dark);
-
   font-size: 0.62rem;
   font-weight: 700;
-
   letter-spacing: 1px;
+  box-shadow: none;
 }
-
 
 /* =========================================================
    SECTION MARKERS
@@ -3776,14 +3767,6 @@ nav a:hover::after {
 
 /* 1. REMOVE ONLY THE WHITE BLOCK OVER THE PHOTO TEXT/LABEL.
    Preserve the photo frame, its background, and shadow. */
-
-.hero-image .photo-label {
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-  border-radius: 0 !important;
-}
 
 /* Keep the existing photo frame design */
 .hero-image .photo-frame {
