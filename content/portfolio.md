@@ -1,3 +1,4 @@
+---
 title: "Academic Portfolio"
 description: "Selected research, data analysis, and technology projects"
 ---
