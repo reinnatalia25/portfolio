@@ -160,20 +160,15 @@ Quantitative interpretation
 
 <div class="media-placeholder">
 
-<div class="media-icon">+</div>
+  <div class="media-icon">+</div>
 
-<h3>Tourism & Occupational Segregation</h3>
+  <h3>Colonial Williamsburg Research</h3>
 
-<p>
-Research paper, STATA output, charts, graphs, and presentation
-materials can be displayed here.
-</p>
+  <p>Read the research paper on historical tourism and occupational segregation.</p>
 
-<a class="media-button"
-href="{{ "project-files/historical-tourism-analysis.pdf" | relURL }}"
-target="_blank">
-View Project PDF →
-</a>
+  <a class="media-button" href="/portfolio/documents/Williamsburg.final.pdf" target="_blank" rel="noopener">
+    View Research Paper →
+  </a>
 
 </div>
 
@@ -243,22 +238,17 @@ Version control · Documentation · Iterative testing
 
 <div class="media-placeholder">
 
-<div class="media-icon">&lt;/&gt;</div>
+  <div class="media-icon">+</div>
 
-<h3>Portfolio Website</h3>
+  <h3>AI-Assisted Portfolio Website</h3>
 
-<p>
-Explore the live website created for this project.
-</p>
+  <p>A live website developed with AI-assisted tools.</p>
 
-<a class="media-button"
-href="https://reinnatalia25.github.io/portfolio/"
-target="_blank">
-View Live Website →
-</a>
+  <a class="media-button" href="https://nmreinoso.github.io/Arze_K/" target="_blank" rel="noopener">
+    Visit Live Website →
+  </a>
 
 </div>
-
 </div>
 
 </div>
@@ -325,20 +315,15 @@ User experience · Technical documentation
 
 <div class="media-placeholder">
 
-<div class="media-icon">$</div>
+  <div class="media-icon">+</div>
 
-<h3>AI Budget Assistant</h3>
+  <h3>AI Budget Assistant</h3>
 
-<p>
-Application screenshots, demonstration videos, project documentation,
-or source code can be displayed here.
-</p>
+  <p>Watch a screen recording demonstrating the budgeting application.</p>
 
-<a class="media-button"
-href="{{ "project-files/ai-budget-assistant.pdf" | relURL }}"
-target="_blank">
-View Project PDF →
-</a>
+  <a class="media-button" href="/portfolio/documents/Budget_A.mp4" target="_blank" rel="noopener">
+    Watch Screen Recording →
+  </a>
 
 </div>
 
