@@ -85,17 +85,11 @@ Written communication · Presentation
 
   <p>Read the research paper or view the presentation.</p>
 
-  <a class="media-button"
-     href="{{ "documents/WIC-Research-Paper.pdf" | relURL }}"
-     target="_blank"
-     rel="noopener">
+  <a class="media-button" href="/portfolio/documents/WIC-Research-Paper.pdf" target="_blank" rel="noopener">
     View Research Paper →
   </a>
 
-  <a class="media-button"
-     href="{{ "documents/WIC-Benefits.pptx" | relURL }}"
-     target="_blank"
-     rel="noopener">
+  <a class="media-button" href="/portfolio/documents/WIC-Benefits.pptx" target="_blank" rel="noopener">
     View Presentation →
   </a>
 
