@@ -6,11 +6,6 @@ title: "Academic Portfolio"
 
 <p class="portfolio-kicker">SELECTED WORK</p>
 
-<p class="portfolio-lead">
-A collection of academic and technical projects completed during my studies
-at William & Mary. These projects demonstrate experience with research,
-data analysis, technology, problem solving, and communication.
-</p>
 
 </div>
 
