@@ -70,37 +70,18 @@ Written communication · Presentation
 </div>
 
 
-<div class="project-media">
 
-<div class="media-header">
-<span>PROJECT MATERIALS</span>
-<span>01</span>
-</div>
+<div class="project-showcase">
 
-<div class="media-placeholder">
+  <div class="project-content">
+    <!-- KEEP: your existing WIC project description -->
+  </div>
 
-<div class="media-icon">+</div>
-
-<h3>Healthcare Outcomes Analysis</h3>
-
-<p>
-Project paper, presentation, charts, or supporting materials can be
-displayed here.
-</p>
-
-<a class="media-button"
-href="{{ "project-files/healthcare-outcomes-analysis.pdf" | relURL }}"
-target="_blank">
-View Project PDF →
-</a>
+  <div class="project-media">
+    <!-- REPLACE: old placeholder with new document cards -->
+  </div>
 
 </div>
-
-</div>
-
-</div>
-
-
 
 <div class="project-showcase">
 
