@@ -3900,3 +3900,45 @@ nav a:hover::after {
   }
 }
 
+
+/* Subtle homepage hero enhancement */
+.hero-image {
+  position: relative;
+  isolation: isolate;
+}
+
+/* Soft decorative shape behind the photo */
+.hero-image::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 72%;
+  aspect-ratio: 1;
+  top: -18px;
+  right: -18px;
+  border-radius: 50%;
+  background: var(--purple-pale);
+  opacity: 0.9;
+}
+
+/* Slightly softer photo-frame shadow */
+.photo-frame {
+  box-shadow:
+    8px 10px 0 var(--purple-pale),
+    0 16px 32px rgba(54, 45, 75, 0.08);
+}
+
+/* Small accent under the introductory heading */
+.hero-text h1 {
+  position: relative;
+}
+
+.hero-text h1::after {
+  content: "";
+  display: block;
+  width: 58px;
+  height: 4px;
+  margin-top: 20px;
+  background: var(--purple);
+  border-radius: 99px;
+}
