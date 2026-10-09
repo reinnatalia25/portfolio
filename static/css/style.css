@@ -3767,3 +3767,105 @@ nav a:hover::after {
     height: 340px;
   }
 }
+
+
+/* =========================================
+   HOMEPAGE MOBILE FIXES
+   ========================================= */
+
+/* 1. Keep the three About Me cards on one row */
+.about-section .about-cards {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 6px !important;
+  width: 100%;
+  min-width: 0;
+}
+
+.about-section .about-card {
+  width: 100%;
+  min-width: 0;
+}
+
+.about-section .about-card h3 {
+  white-space: nowrap;
+  overflow-wrap: normal;
+  word-break: normal;
+  font-size: clamp(0.55rem, 2.6vw, 0.85rem);
+  letter-spacing: -0.04em;
+}
+
+/* 2. Remove the white frame behind the homepage photo */
+.hero-image .photo-frame {
+  padding: 0 !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  overflow: visible !important;
+}
+
+.hero-image .photo-frame img,
+.hero-image > img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 35%;
+  border: none;
+  border-radius: 16px;
+}
+
+/* 3. Adjust the homepage for small screens */
+@media (max-width: 600px) {
+  .hero.container {
+    width: 92%;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+    padding: 28px 0 36px;
+  }
+
+  .hero-text {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .hero-image {
+    width: min(100%, 320px);
+    max-width: 320px;
+    justify-self: center;
+    margin: 0 auto;
+  }
+
+  .about-section .about-cards {
+    gap: 5px !important;
+  }
+
+  .about-section .about-card {
+    height: 155px;
+  }
+
+  .about-section .about-card-front,
+  .about-section .about-card-back {
+    min-width: 0;
+    padding: 20px 4px 8px;
+  }
+
+  .about-section .about-card h3 {
+    font-size: clamp(0.52rem, 2.7vw, 0.78rem);
+  }
+}
+
+/* Extra-small phones */
+@media (max-width: 340px) {
+  .about-section .about-card h3 {
+    font-size: 0.5rem;
+    letter-spacing: -0.05em;
+  }
+
+  .hero-image {
+    width: 100%;
+  }
+}
