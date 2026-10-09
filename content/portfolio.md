@@ -321,9 +321,9 @@ User experience · Technical documentation
 
   <p>Watch a screen recording demonstrating the budgeting application.</p>
 
-  <a class="media-button" href="/portfolio/documents/Budget_A.mp4" target="_blank" rel="noopener">
-    Watch Screen Recording →
-  </a>
+ <a class="media-button" href="https://drive.google.com/file/d/1gEvhPPO4CRbuBYXnqHpkJo_QEBdylx4V/view?usp=sharing" target="_blank" rel="noopener">
+  Watch Screen Recording →
+</a>
 
 </div>
 
