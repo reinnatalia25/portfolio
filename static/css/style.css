@@ -3742,3 +3742,128 @@ nav a:hover::after {
     align-self: flex-start;
   }
 }
+
+
+/* WIC PROJECT DOCUMENTS */
+
+.wic-documents {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.document-card {
+  display: block;
+  min-width: 0;
+  padding: 15px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--white);
+  color: var(--dark);
+  text-decoration: none;
+  box-shadow: 0 5px 18px rgba(38, 51, 46, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.document-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(38, 51, 46, 0.1);
+}
+
+.document-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.document-card-header h3 {
+  margin: 0 0 4px;
+  color: var(--green);
+  font-size: 1rem;
+}
+
+.document-card-header p {
+  margin: 0;
+  color: var(--gray);
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+.document-icon {
+  display: flex;
+  flex: 0 0 42px;
+  height: 46px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.pdf-icon {
+  background: #f7e8e5;
+  color: #a84e48;
+}
+
+.ppt-icon {
+  background: var(--purple-pale);
+  color: var(--purple-dark);
+}
+
+.wic-pdf-preview {
+  display: block;
+  width: 100%;
+  height: 260px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--cream);
+}
+
+.document-card .media-button {
+  display: block;
+  margin-top: 12px;
+  text-align: center;
+}
+
+.presentation-card {
+  background: var(--purple-pale);
+  border-color: var(--purple-light);
+}
+
+.presentation-preview {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 65px;
+  padding: 12px;
+  border: 1px dashed var(--purple-light);
+  border-radius: 7px;
+  background: var(--white);
+  color: var(--gray);
+  font-size: 0.82rem;
+}
+
+.presentation-symbol {
+  color: var(--purple-dark);
+  font-size: 1.7rem;
+}
+
+.presentation-arrow {
+  margin-left: auto;
+  color: var(--purple-dark);
+}
+
+.document-action {
+  display: block;
+  margin-top: 12px;
+  color: var(--purple-dark);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .wic-pdf-preview {
+    height: 220px;
+  }
+}
