@@ -3550,3 +3550,111 @@ nav a:hover::after {
   }
 }
 
+
+/* =========================================
+   HOMEPAGE FIXES — PHOTO + MOBILE LAYOUT
+   Add to the bottom of the original style.css
+========================================= */
+
+/* 1. PHOTO: remove the square decorative overlay */
+.photo-frame::before,
+.photo-frame::after {
+    content: none !important;
+    display: none !important;
+}
+
+/* Clean photo frame */
+.photo-frame {
+    position: relative;
+    overflow: hidden;
+    border-radius: 22px;
+    isolation: isolate;
+    box-shadow: 0 14px 35px rgba(41, 72, 60, 0.14);
+}
+
+/* Keep the image itself rounded and properly cropped */
+.photo-frame img,
+.hero-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 22px;
+}
+
+/* Keep the photo from becoming oversized */
+.hero-image {
+    width: 100%;
+    max-width: 390px;
+    margin-inline: auto;
+}
+
+/* 2. HOMEPAGE: prevent layout overflow on smaller screens */
+@media (max-width: 768px) {
+    .hero {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 28px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .hero-text {
+        min-width: 0;
+    }
+
+    .hero-image {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    /* About Me cards: keep them on ONE row */
+    .about-cards {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 12px;
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding: 8px 2px 16px;
+        box-sizing: border-box;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin;
+    }
+
+    .about-card {
+        flex: 0 0 calc((100% - 24px) / 3);
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    /* Prevent card text from forcing the cards wider */
+    .about-card-front,
+    .about-card-back {
+        min-width: 0;
+        overflow-wrap: anywhere;
+        box-sizing: border-box;
+    }
+}
+
+/* 3. Very narrow phones: preserve the single row
+      and allow horizontal scrolling */
+@media (max-width: 420px) {
+    .about-cards {
+        gap: 10px;
+    }
+
+    .about-card {
+        flex: 0 0 145px;
+    }
+
+    .about-card-front,
+    .about-card-back {
+        padding: 14px;
+        font-size: 0.88rem;
+    }
+
+    .hero-image {
+        max-width: 280px;
+    }
+}
