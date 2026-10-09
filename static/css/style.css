@@ -1183,3 +1183,437 @@ footer a:hover {
     break-inside: avoid;
   }
 }
+
+
+/* =========================================================
+   RESTORE ORIGINAL RESUME + ACADEMIC PORTFOLIO STYLING
+   Keep the new homepage styles above this section.
+========================================================= */
+
+/* Compatibility aliases used by the original page styles */
+:root {
+  --green: var(--sage-dark);
+  --gray: var(--muted);
+  --sage-light: #dfe8e2;
+  --shadow: 0 10px 30px rgba(38, 51, 46, 0.07);
+}
+
+/* Shared content page layout */
+.content-page {
+  width: 90%;
+  max-width: 1000px;
+  min-height: 75vh;
+  margin: 0 auto;
+  padding-top: 70px;
+  padding-bottom: 110px;
+}
+
+.page-heading {
+  position: relative;
+  margin-bottom: 38px;
+  padding-left: 22px;
+}
+
+.page-heading-accent {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  width: 4px;
+  height: 82px;
+  background: var(--purple);
+  border-radius: 4px;
+}
+
+.page-heading h1 {
+  color: var(--green);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.1;
+  margin-bottom: 12px;
+}
+
+.page-subtitle {
+  color: var(--gray);
+  font-size: 0.95rem;
+}
+
+/* Shared document panel */
+.markdown-content {
+  position: relative;
+  padding: 50px 58px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+.markdown-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 35px;
+  left: 35px;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--purple),
+    var(--sage),
+    var(--purple-light)
+  );
+  border-radius: 0 0 4px 4px;
+}
+
+.markdown-content h1 {
+  color: var(--green);
+  font-size: 2rem;
+  margin: 0 0 20px;
+}
+
+.markdown-content h2 {
+  color: var(--green);
+  font-size: 1.5rem;
+  margin: 35px 0 12px;
+}
+
+.markdown-content h3 {
+  color: var(--dark);
+  font-size: 1.1rem;
+  margin: 20px 0 8px;
+}
+
+.markdown-content p {
+  color: var(--gray);
+  margin-bottom: 15px;
+}
+
+.markdown-content a {
+  color: var(--purple-dark);
+  font-weight: 600;
+}
+
+.markdown-content a:hover {
+  color: var(--green);
+}
+
+/* Resume page */
+.resume-page {
+  width: 90%;
+  max-width: 930px;
+  margin-inline: auto;
+  padding-top: 65px;
+  padding-bottom: 100px;
+}
+
+.resume-page .markdown-content {
+  padding: 48px 60px;
+  border-radius: 8px;
+  box-shadow:
+    0 12px 35px rgba(38, 51, 46, 0.08),
+    8px 8px 0 var(--purple-pale);
+}
+
+/* Resume section headings */
+.resume-page .markdown-content h1:not(:first-child) {
+  position: relative;
+  z-index: 1;
+  margin: 38px 0 19px;
+  padding: 0 0 10px 17px;
+  border: 0;
+  color: var(--green);
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.resume-page .markdown-content h1:not(:first-child)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 21px;
+  background: var(--purple);
+  border-radius: 8px;
+}
+
+.resume-page .markdown-content h1:not(:first-child)::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 17px;
+  width: 65px;
+  height: 2px;
+  background: var(--purple-light);
+  border-radius: 50%;
+}
+
+.resume-page .markdown-content h1:first-child {
+  margin-top: 0;
+}
+
+/* Education highlight */
+.resume-page .markdown-content h1:nth-of-type(2) + p {
+  padding: 16px 20px;
+  background: #faf9fc;
+  border: 1px solid var(--purple-light);
+  border-radius: 8px;
+  box-shadow: 4px 4px 0 var(--purple-pale);
+}
+
+/* Job and project titles */
+.resume-page .markdown-content h2 {
+  position: relative;
+  margin: 25px 0 2px;
+  padding-left: 16px;
+  color: var(--green);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.resume-page .markdown-content h2::before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  background: var(--purple);
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px var(--purple-light);
+}
+
+.resume-page .markdown-content h2 + p {
+  margin: 2px 0 7px;
+  color: var(--purple-dark);
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.resume-page .markdown-content p {
+  margin: 4px 0 10px;
+  color: var(--gray);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.resume-page .markdown-content h1:nth-of-type(3) ~ p {
+  line-height: 1.8;
+}
+
+.resume-page .markdown-content h1:nth-of-type(3) ~ p strong {
+  color: var(--purple-dark);
+}
+
+.resume-page .markdown-content ul {
+  margin: 7px 0 21px;
+  padding: 0 0 0 16px;
+  list-style: none;
+}
+
+.resume-page .markdown-content li {
+  position: relative;
+  margin-bottom: 6px;
+  padding-left: 21px;
+  color: var(--gray);
+  font-size: 0.87rem;
+  line-height: 1.6;
+}
+
+.resume-page .markdown-content li::before {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 0;
+  width: 7px;
+  height: 7px;
+  background: var(--white);
+  border: 2px solid var(--purple);
+  border-radius: 50%;
+}
+
+.resume-page .markdown-content strong {
+  color: var(--dark);
+  font-weight: 700;
+}
+
+.resume-page .markdown-content em {
+  color: var(--purple-dark);
+  font-size: 0.82rem;
+  font-style: italic;
+}
+
+.resume-page .markdown-content a {
+  color: var(--purple-dark);
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1px solid var(--purple-light);
+}
+
+.resume-page .markdown-content a:hover {
+  color: var(--green);
+  border-color: var(--sage);
+}
+
+/* Academic Portfolio page */
+.portfolio-page {
+  width: 92%;
+  max-width: 1050px;
+  margin: 0 auto;
+  padding-top: 65px;
+  padding-bottom: 100px;
+}
+
+.portfolio-page .markdown-content {
+  width: 100%;
+  padding: 55px;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(240, 237, 245, 0.65),
+      rgba(255, 255, 255, 0) 35%
+    ),
+    var(--white);
+  box-shadow:
+    0 12px 35px rgba(38, 51, 46, 0.07),
+    8px 8px 0 var(--sage-light);
+}
+
+/* Portfolio section headings */
+.portfolio-page .markdown-content h1 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 38px 0 18px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--purple-light);
+  color: var(--green);
+  font-size: 1.05rem;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+
+.portfolio-page .markdown-content h1::before {
+  content: "";
+  flex-shrink: 0;
+  width: 9px;
+  height: 9px;
+  background: var(--purple);
+  border-radius: 50%;
+}
+
+.portfolio-page .markdown-content h1:first-child {
+  margin-top: 0;
+}
+
+/* Portfolio project title labels */
+.portfolio-page .markdown-content h2 {
+  display: inline-block;
+  position: relative;
+  margin-top: 30px;
+  padding: 7px 15px;
+  background: var(--purple-pale);
+  border: 1px solid var(--purple-light);
+  border-radius: 5px;
+  color: var(--green);
+  font-size: 1.35rem;
+}
+
+.portfolio-page .markdown-content h3 {
+  color: var(--purple-dark);
+  font-size: 1rem;
+}
+
+.portfolio-page .markdown-content p {
+  color: var(--gray);
+  font-size: 0.94rem;
+  line-height: 1.75;
+}
+
+.portfolio-page .markdown-content ul {
+  margin: 15px 0 25px;
+  padding: 0;
+  list-style: none;
+}
+
+.portfolio-page .markdown-content li {
+  position: relative;
+  margin-bottom: 9px;
+  padding-left: 24px;
+  color: var(--gray);
+}
+
+.portfolio-page .markdown-content li::before {
+  content: "✦";
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: var(--purple);
+}
+
+.portfolio-page .markdown-content strong {
+  color: var(--green);
+}
+
+.portfolio-page .markdown-content a {
+  color: var(--purple-dark);
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: var(--purple-light);
+  text-underline-offset: 3px;
+}
+
+.portfolio-page .markdown-content a:hover {
+  color: var(--green);
+}
+
+/* Mobile content pages */
+@media (max-width: 700px) {
+  .content-page,
+  .resume-page,
+  .portfolio-page {
+    width: 92%;
+    padding-top: 42px;
+    padding-bottom: 65px;
+  }
+
+  .resume-page .markdown-content,
+  .portfolio-page .markdown-content {
+    padding: 30px 22px;
+  }
+
+  .resume-page .markdown-content > h1:first-child {
+    font-size: 2rem;
+  }
+
+  .resume-page .markdown-content h1:not(:first-child) {
+    font-size: 0.86rem;
+  }
+
+  .resume-page .markdown-content h2 {
+    font-size: 0.96rem;
+  }
+
+  .resume-page .markdown-content li {
+    font-size: 0.84rem;
+  }
+
+  .portfolio-page .markdown-content h2 {
+    max-width: 100%;
+    font-size: 1.12rem;
+  }
+}
+
+/* Print-friendly resume */
+@media print {
+  .resume-page .markdown-content {
+    padding: 0;
+    border: 0;
+    box-shadow: none;
+  }
+
+  .resume-page .markdown-content::before,
+  .resume-page .markdown-content::after {
+    display: none;
+  }
+}
