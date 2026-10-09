@@ -3550,111 +3550,134 @@ nav a:hover::after {
   }
 }
 
+/* =========================================================
+   FINAL HOMEPAGE ADJUSTMENTS
+   These rules are intentionally placed at the end so they
+   override earlier duplicate homepage rules without changing
+   the Resume or Academic Portfolio pages.
+========================================================= */
 
-/* =========================================
-   HOMEPAGE FIXES — PHOTO + MOBILE LAYOUT
-   Add to the bottom of the original style.css
-========================================= */
-
-/* 1. PHOTO: remove the square decorative overlay */
-.photo-frame::before,
-.photo-frame::after {
-    content: none !important;
-    display: none !important;
-}
-
-/* Clean photo frame */
-.photo-frame {
-    position: relative;
-    overflow: hidden;
-    border-radius: 22px;
-    isolation: isolate;
-    box-shadow: 0 14px 35px rgba(41, 72, 60, 0.14);
-}
-
-/* Keep the image itself rounded and properly cropped */
-.photo-frame img,
-.hero-image img {
-    display: block;
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 22px;
-}
-
-/* Keep the photo from becoming oversized */
+/* Homepage photo: remove decorative squares and hard offset shadows. */
 .hero-image {
-    width: 100%;
-    max-width: 390px;
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  justify-self: end;
+  isolation: isolate;
+}
+
+.hero-image .photo-frame {
+  position: relative;
+  z-index: 1;
+  padding: 11px;
+  background: var(--white, #fff);
+  border: 1px solid var(--purple-light, #e4d9ec);
+  border-radius: 22px;
+  box-shadow: 0 12px 30px rgba(38, 51, 46, 0.08);
+  overflow: hidden;
+}
+
+.hero-image .photo-frame::before,
+.hero-image .photo-frame::after {
+  content: none !important;
+  display: none !important;
+  box-shadow: none !important;
+}
+
+.hero-image .photo-frame img,
+.hero-image > img {
+  display: block;
+  width: 100%;
+  height: clamp(300px, 39vw, 460px);
+  object-fit: cover;
+  object-position: center 35%;
+  border-radius: 14px;
+}
+
+/* Mobile homepage layout. Keep the three About Me cards in one row. */
+@media (max-width: 600px) {
+  .hero.container {
+    width: 90%;
+    padding: 35px 0 43px;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 30px;
+  }
+
+  .hero-text {
+    min-width: 0;
+  }
+
+  .hero-image {
+    width: min(100%, 350px);
+    max-width: 350px;
+    justify-self: center;
     margin-inline: auto;
+  }
+
+  .hero-image .photo-frame img,
+  .hero-image > img {
+    height: 340px;
+  }
+
+  .about-section .about-cards {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow: visible;
+  }
+
+  .about-section .about-card {
+    width: 100%;
+    min-width: 0;
+    height: 165px;
+  }
+
+  .about-section .about-card-front,
+  .about-section .about-card-back {
+    box-sizing: border-box;
+    min-width: 0;
+    padding: 22px 7px 10px;
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+
+  .about-section .about-card h3 {
+    font-size: clamp(0.66rem, 2.8vw, 0.88rem);
+    line-height: 1.25;
+  }
+
+  .about-section .about-card p {
+    font-size: clamp(0.60rem, 2.45vw, 0.74rem);
+    line-height: 1.3;
+  }
 }
 
-/* 2. HOMEPAGE: prevent layout overflow on smaller screens */
-@media (max-width: 768px) {
-    .hero {
-        grid-template-columns: minmax(0, 1fr);
-        gap: 28px;
-        padding-left: 20px;
-        padding-right: 20px;
-    }
+@media (max-width: 380px) {
+  .about-section .about-cards {
+    gap: 5px !important;
+  }
 
-    .hero-text {
-        min-width: 0;
-    }
+  .about-section .about-card {
+    height: 158px;
+  }
 
-    .hero-image {
-        width: 100%;
-        max-width: 320px;
-    }
+  .about-section .about-card-front,
+  .about-section .about-card-back {
+    padding: 20px 5px 8px;
+  }
 
-    /* About Me cards: keep them on ONE row */
-    .about-cards {
-        display: flex;
-        flex-wrap: nowrap;
-        gap: 12px;
-        width: 100%;
-        max-width: 100%;
-        overflow-x: auto;
-        overflow-y: hidden;
-        padding: 8px 2px 16px;
-        box-sizing: border-box;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: thin;
-    }
+  .about-section .about-card h3 {
+    font-size: 0.64rem;
+  }
 
-    .about-card {
-        flex: 0 0 calc((100% - 24px) / 3);
-        min-width: 0;
-        box-sizing: border-box;
-    }
+  .about-section .about-card p {
+    font-size: 0.58rem;
+  }
 
-    /* Prevent card text from forcing the cards wider */
-    .about-card-front,
-    .about-card-back {
-        min-width: 0;
-        overflow-wrap: anywhere;
-        box-sizing: border-box;
-    }
-}
-
-/* 3. Very narrow phones: preserve the single row
-      and allow horizontal scrolling */
-@media (max-width: 420px) {
-    .about-cards {
-        gap: 10px;
-    }
-
-    .about-card {
-        flex: 0 0 145px;
-    }
-
-    .about-card-front,
-    .about-card-back {
-        padding: 14px;
-        font-size: 0.88rem;
-    }
-
-    .hero-image {
-        max-width: 280px;
-    }
+  .hero-image {
+    max-width: 300px;
+  }
 }
