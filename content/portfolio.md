@@ -1,13 +1,10 @@
 ---
 title: "Academic Portfolio"
-description: "Selected research, data analysis, and technology projects"
 ---
 
 <div class="portfolio-intro">
 
 <p class="portfolio-kicker">SELECTED WORK</p>
-
-<h1>Explore Projects</h1>
 
 <p class="portfolio-lead">
 A collection of academic and technical projects completed during my studies
@@ -16,7 +13,6 @@ data analysis, technology, problem solving, and communication.
 </p>
 
 </div>
-
 
 <div class="project-showcase">
 
