@@ -3769,17 +3769,51 @@ nav a:hover::after {
 }
 
 
-/* =========================================
-   HOMEPAGE MOBILE FIXES
-   ========================================= */
+/* =========================================================
+   FIXED HOMEPAGE PHOTO + RESPONSIVE ABOUT ME
+   Add this at the VERY END of style.css
+========================================================= */
 
-/* 1. Keep the three About Me cards on one row */
+/* 1. REMOVE ONLY THE WHITE BLOCK OVER THE PHOTO TEXT/LABEL.
+   Preserve the photo frame, its background, and shadow. */
+
+.hero-image .photo-label {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+}
+
+/* Keep the existing photo frame design */
+.hero-image .photo-frame {
+  padding: 11px;
+  background: var(--white);
+  border: 1px solid var(--purple-light);
+  border-radius: 22px;
+  box-shadow: 0 12px 30px rgba(38, 51, 46, 0.08);
+}
+
+/* Keep the photo inside its frame */
+.hero-image .photo-frame img {
+  display: block;
+  width: 100%;
+  height: clamp(300px, 39vw, 460px);
+  object-fit: cover;
+  object-position: center 35%;
+  border-radius: 14px;
+}
+
+/* 2. KEEP ABOUT ME CARDS SIDE BY SIDE AS THE LAPTOP SHRINKS */
+
 .about-section .about-cards {
   display: grid !important;
   grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-  gap: 6px !important;
+  gap: clamp(6px, 1.5vw, 16px);
   width: 100%;
+  max-width: 1000px;
   min-width: 0;
+  margin-inline: auto;
 }
 
 .about-section .about-card {
@@ -3787,60 +3821,77 @@ nav a:hover::after {
   min-width: 0;
 }
 
+/* Scale the three headings down smoothly */
 .about-section .about-card h3 {
+  font-size: clamp(0.65rem, 1.45vw, 1.05rem);
+  line-height: 1.2;
   white-space: nowrap;
   overflow-wrap: normal;
   word-break: normal;
-  font-size: clamp(0.55rem, 2.6vw, 0.85rem);
-  letter-spacing: -0.04em;
 }
 
-/* 2. Remove the white frame behind the homepage photo */
-.hero-image .photo-frame {
-  padding: 0 !important;
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  border-radius: 0 !important;
-  overflow: visible !important;
+/* Make card padding shrink with the available space */
+.about-section .about-card-front,
+.about-section .about-card-back {
+  min-width: 0;
+  padding: clamp(8px, 1.6vw, 22px);
 }
 
-.hero-image .photo-frame img,
-.hero-image > img {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-  object-position: center 35%;
-  border: none;
-  border-radius: 16px;
-}
-
-/* 3. Adjust the homepage for small screens */
-@media (max-width: 600px) {
+/* 3. LAPTOPS AND TABLETS */
+@media (min-width: 601px) and (max-width: 900px) {
   .hero.container {
-    width: 92%;
-    grid-template-columns: minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr) minmax(220px, 0.8fr);
     gap: 24px;
-    padding: 28px 0 36px;
   }
 
-  .hero-text {
-    min-width: 0;
-    width: 100%;
+  .hero.container .hero-name {
+    font-size: clamp(2.3rem, 5vw, 3.5rem);
+    letter-spacing: -1.5px;
+    white-space: normal;
+    overflow-wrap: anywhere;
   }
 
   .hero-image {
-    width: min(100%, 320px);
-    max-width: 320px;
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .about-section .about-card {
+    height: 190px;
+  }
+
+  .about-section .about-card h3 {
+    font-size: clamp(0.65rem, 1.55vw, 0.95rem);
+  }
+
+  .about-section .about-shape-icon {
+    width: 40px;
+    height: 40px;
+    right: 12px;
+  }
+}
+
+/* 4. PHONES — keep all three About Me cards in one row */
+@media (max-width: 600px) {
+  .hero.container {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+  }
+
+  .hero-image {
+    width: min(100%, 350px);
+    max-width: 350px;
     justify-self: center;
-    margin: 0 auto;
+    margin-inline: auto;
+  }
+
+  .hero-image .photo-frame img {
+    height: 340px;
   }
 
   .about-section .about-cards {
-    gap: 5px !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 5px;
   }
 
   .about-section .about-card {
@@ -3849,23 +3900,20 @@ nav a:hover::after {
 
   .about-section .about-card-front,
   .about-section .about-card-back {
-    min-width: 0;
     padding: 20px 4px 8px;
   }
 
   .about-section .about-card h3 {
     font-size: clamp(0.52rem, 2.7vw, 0.78rem);
+    letter-spacing: -0.03em;
+  }
+
+  .about-section .about-shape-icon {
+    width: 28px;
+    height: 28px;
+    top: 30px;
+    right: 6px;
+    font-size: 0.9rem;
   }
 }
 
-/* Extra-small phones */
-@media (max-width: 340px) {
-  .about-section .about-card h3 {
-    font-size: 0.5rem;
-    letter-spacing: -0.05em;
-  }
-
-  .hero-image {
-    width: 100%;
-  }
-}
