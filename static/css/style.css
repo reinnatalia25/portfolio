@@ -3519,210 +3519,226 @@ nav a:hover::after {
 }
 
 
+
 /* ==========================================
-   HOMEPAGE FIXES
-   Add at the VERY END of style.css
+   HOMEPAGE FIXES — FINAL OVERRIDES
    ========================================== */
 
-/* 1. HERO BUTTONS — consistent size and contrast */
+/* HERO BUTTONS */
+
 .hero-buttons {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 12px;
-  margin-top: 24px;
+  gap: 14px;
+  margin-top: 28px;
 }
 
-.hero-buttons a {
-  box-sizing: border-box;
-  min-height: 44px;
-  padding: 11px 20px;
-  font-size: 0.9rem;
-  line-height: 1.25;
-  text-decoration: none;
-}
-
-/* Resume button: always solid green with readable text */
-.hero-buttons a.button,
-.hero-buttons a.button:first-child {
+/* Primary button: solid green */
+.hero-buttons a.button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: var(--sage-dark);
-  color: #ffffff;
-  border: 1px solid var(--sage-dark);
-  border-radius: 999px;
+  min-height: 46px;
+  padding: 12px 22px;
+
+  background-color: var(--green);
+  color: var(--white);
+  border: 1px solid var(--green);
+  border-radius: 7px;
+
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.3;
+  text-decoration: none;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
 }
 
-.hero-buttons a.button:hover,
-.hero-buttons a.button:first-child:hover {
-  background: var(--purple-dark);
-  color: #ffffff;
+.hero-buttons a.button:hover {
+  background-color: var(--purple-dark);
+  color: var(--white);
   border-color: var(--purple-dark);
   transform: translateY(-2px);
 }
 
-/* Explore link: keep it lighter than the main button */
+/* Secondary link */
 .hero-buttons a.text-link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 7px;
-  min-height: 44px;
-  padding: 10px 6px;
+  min-height: 46px;
+  padding: 10px 4px;
+
   background: transparent;
   color: var(--purple-dark);
   border: 1px solid transparent;
-  border-radius: 8px;
+  border-radius: 7px;
+
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
 }
 
 .hero-buttons a.text-link:hover {
-  background: var(--purple-pale);
-  color: var(--sage-dark);
+  background-color: var(--purple-pale);
+  color: var(--green);
+}
+
+.hero-buttons a.text-link span {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.hero-buttons a.text-link:hover span {
+  transform: translateX(4px);
 }
 
 
-/* 2. PHOTO — remove the white oval label */
-.photo-label {
+/* REMOVE PHOTO LABEL */
+
+.photo-frame .photo-label {
   display: none !important;
 }
 
 
-/* 3. FINAL CTA — center the content and fix button contrast */
+/* FINAL CTA — KEEP THE LAVENDER CARD DESIGN */
+
+.home-cta {
+  padding: 34px 0;
+  background: var(--white);
+  color: var(--dark);
+  text-align: left;
+}
+
 .home-cta .cta-inner {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  gap: 22px;
-  width: 100%;
-  max-width: var(--content-width);
-  margin-inline: auto;
-  text-align: center;
+  justify-content: space-between;
+  gap: 25px;
+
+  width: 90%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 27px 32px;
+
+  background: var(--purple-pale);
+  border: 1px solid var(--purple-light);
+  border-radius: 14px 5px 14px 5px;
+  text-align: left;
 }
 
 .home-cta .cta-inner > div {
-  width: 100%;
+  flex: 1;
+  min-width: 0;
+}
+
+.home-cta .cta-inner .eyebrow {
+  margin: 0 0 8px;
+  color: var(--purple-dark);
 }
 
 .home-cta .cta-inner h2 {
-  margin-bottom: 12px;
-  color: #ffffff;
+  margin: 0;
+  color: var(--green);
 }
 
-.home-cta .cta-inner p {
-  margin: 0 auto;
-  color: #dce5e1;
+.home-cta .cta-inner p:not(.eyebrow) {
+  margin: 7px 0 0;
+  color: var(--gray);
 }
 
-/* Override earlier button rules that may make it transparent */
-.home-cta .cta-inner a.button,
-.home-cta .cta-inner a.button:first-child {
+/* CTA button */
+.home-cta .cta-inner a.button {
   display: inline-flex;
+  flex-shrink: 0;
   align-items: center;
   justify-content: center;
-  align-self: center;
   min-height: 46px;
-  padding: 12px 23px;
-  background: #ffffff;
-  color: var(--sage-dark);
-  border: 1px solid #ffffff;
-  border-radius: 999px;
-  font-size: 0.92rem;
-  font-weight: 750;
+  padding: 12px 20px;
+
+  background: var(--green);
+  color: var(--white);
+  border: 1px solid var(--green);
+  border-radius: 7px;
+
+  font-size: 0.9rem;
+  font-weight: 700;
   text-decoration: none;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
 }
 
-.home-cta .cta-inner a.button:hover,
-.home-cta .cta-inner a.button:first-child:hover {
-  background: var(--purple-pale);
-  color: var(--sage-dark);
-  border-color: var(--purple-pale);
+.home-cta .cta-inner a.button:hover {
+  background: var(--purple-dark);
+  color: var(--white);
+  border-color: var(--purple-dark);
   transform: translateY(-2px);
 }
 
 
-/* 4. ABOUT ME — prevent the Goals card from being clipped */
+/* ABOUT CARDS — PREVENT TEXT CLIPPING */
+
 .about-cards {
   align-items: stretch;
 }
 
 .about-card {
   min-width: 0;
-  min-height: 230px;
 }
 
+/* Keep the card's existing flip layout and height.
+   Do not override its front/back positioning. */
 .about-card-front,
 .about-card-back {
   box-sizing: border-box;
-  min-width: 0;
-  min-height: 230px;
-  padding: 24px;
-  overflow-wrap: anywhere;
-}
-
-.about-card-front h3,
-.about-card-back h3 {
-  line-height: 1.3;
-  overflow-wrap: normal;
-}
-
-.about-card-back p {
-  line-height: 1.65;
   overflow-wrap: break-word;
 }
 
+.about-card-back p {
+  line-height: 1.6;
+}
 
-/* 5. MOBILE — give each About Me card enough room */
+
+/* MOBILE */
+
 @media (max-width: 700px) {
-  .about-section {
-    padding: 55px 0;
-  }
-
-  .about-cards {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 16px;
-  }
-
-  .about-card {
-    width: 100%;
-    min-height: 225px;
-  }
-
-  .about-card-front,
-  .about-card-back {
-    min-height: 225px;
-    padding: 22px;
-  }
-
-  .about-card-back p {
-    font-size: 0.94rem;
-    line-height: 1.7;
-  }
-
-  /* Keep hero buttons from overflowing on narrow phones */
   .hero-buttons {
-    gap: 8px;
+    justify-content: center;
+    gap: 10px 14px;
   }
 
-  .hero-buttons a {
-    max-width: 100%;
+  .hero-buttons a.button {
+    padding: 11px 15px;
+    font-size: 0.84rem;
   }
 
-  /* Stack and center the final CTA cleanly */
-  .home-cta {
-    padding: 55px 20px;
+  .hero-buttons a.text-link {
+    font-size: 0.84rem;
   }
 
   .home-cta .cta-inner {
-    gap: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 22px 19px;
   }
 
-  .home-cta .cta-inner h2 {
-    font-size: clamp(1.65rem, 6vw, 2.1rem);
-    line-height: 1.25;
+  .home-cta .cta-inner a.button {
+    align-self: flex-start;
   }
-}
-body {
-    background: red !important;
 }
